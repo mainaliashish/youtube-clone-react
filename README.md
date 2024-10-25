@@ -1,5 +1,4 @@
-- Redux
--
+### Redux
 - useDispatch is used to invoke a method use to push data into a store
 - UseSelector is used to get data from the store
 - Wrap the main App inside Provider to configure store
