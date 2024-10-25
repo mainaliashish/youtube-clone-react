@@ -1,7 +1,7 @@
 import './App.css';
 import HeaderComponent from './components/HeaderComponent';
 import { Provider } from 'react-redux';
-import appStore from './utils/appStore';
+import appStore from './store/appStore';
 import appRouter from './router/appRouter';
 import { RouterProvider } from 'react-router-dom';
 

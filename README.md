@@ -9,7 +9,7 @@
 # We have appSlice, videoSlice in this current Project
 ## For this use createSlice()
 # debouncing - 
-<!-- Search debouncing is a technique used to delay the execution of a search function until a certain period has passed without additional input, usually in real-time search applications like autocomplete or live search.
+Search debouncing is a technique used to delay the execution of a search function until a certain period has passed without additional input, usually in real-time search applications like autocomplete or live search.
 
 Here’s how it works and why it’s useful:
 
@@ -17,7 +17,7 @@ Delay in Execution: Debouncing adds a slight delay (say, 300 milliseconds) after
 
 Reduces API Requests: Without debouncing, each keystroke might trigger a search request, potentially leading to an overwhelming number of requests. Debouncing consolidates these into a single request, reducing server load and network traffic.
 
-Improves User Experience: By avoiding excessive requests, debouncing makes the search smoother and faster, minimizing the delay and loading spinners between inputs, especially in applications where instant feedback is expected. -->
+Improves User Experience: By avoiding excessive requests, debouncing makes the search smoother and faster, minimizing the delay and loading spinners between inputs, especially in applications where instant feedback is expected.
 #
 #
 #

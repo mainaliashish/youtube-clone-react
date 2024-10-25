@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/appSlice";
+import { toggleMenu } from "../store/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
-import { cacheResults } from "../utils/searchSlice";
+import { cacheResults } from "../store/searchSlice";
 
 const HeaderComponent = () => {
   const dispatch = useDispatch();

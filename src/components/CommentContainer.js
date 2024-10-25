@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { COMMENT_API } from "../utils/constants";
 import { useDispatch, useSelector } from 'react-redux';
-import { addComments } from "../utils/commentSlice";
+import { addComments } from "../store/commentSlice";
 import CommentCard from "./CommentCard";
 
 function CommentContainer() {
@@ -19,6 +19,7 @@ function CommentContainer() {
     if (!comments) return;
   return (
     <div>
+        <h2 className="font-bold text-2xl">Comments:</h2>
         {comments.map(comment => <CommentCard key={comment.id} info={comment}/> )}
     </div>
   )
