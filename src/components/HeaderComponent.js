@@ -1,9 +1,57 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React, {useEffect, useState} from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { cacheResults } from "../utils/searchSlice";
 
 const HeaderComponent = () => {
   const dispatch = useDispatch();
+  const [searchQuery, setSearchQuery] = useState("")
+  const [suggestions, setSuggestions] = useState([])
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  console.log(searchQuery);
+  const searchCache = useSelector(store => store.search.tempResults);
+  /**
+   * {
+   *    "iphone": ["x", "11", "iphon", "iphone 12"]
+   * }
+   */
+  useEffect(() => {
+    const timer = setTimeout(() => 
+      {
+        if (!searchQuery) return
+        if(searchCache[searchQuery]) {
+          setSuggestions(searchCache[searchQuery])
+        } else {
+          getSearchSuggestions()
+        }
+      }
+      , 2000)
+    return () => {
+      clearTimeout(timer);
+    }
+  }, [searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    if (searchQuery) {
+      const URL = YOUTUBE_SEARCH_API+searchQuery;
+      // console.log(URL);
+      const data = await fetch(URL);
+      const response = await data.json()
+      setSuggestions(response[1])
+      console.log(response[1])
+      dispatch(cacheResults({
+        [searchQuery]: response[1]
+      }))
+    }
+  };
+
+  const resetSearchBox = () => {
+    setSearchQuery("")
+    setSuggestions("")
+    setShowSuggestions(false)
+  }
+  
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
@@ -28,10 +76,26 @@ const HeaderComponent = () => {
         <input
           type="text"
           className="w-1/2 border border-gray-500 p-2 rounded-l-full"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          onFocus={() => setShowSuggestions(true)}
+          onBlur={() =>  resetSearchBox()}
         />
         <button className="bg-gray-300 text-white border border-gray-500 px-5 py-2 rounded-r-full">
           🔍
         </button>
+        {showSuggestions && (
+        <div className="absolute bg-white px-5 w-[36rem] border border-gray-100">
+        <ul>
+          {
+            suggestions && 
+            suggestions.map(suggestion =>
+              <li className="py-2 shadow-sm hover:bg-gray-100" key={suggestion+Math.random(1,20)}> 🔍 {suggestion}</li>
+            )
+          }
+        </ul>
+      </div>
+        )}
       </div>
       <div>
         <img

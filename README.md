@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Redux
+#
+# useDispatch is used to invoke a method use to push data into a store
+# UseSelector is used to get data from the store
+# Wrap the main App inside Provider to configure store
+# Example: <Provider store={appStore}> </Provider>
+# Create a main store using configureStore()
+# Create a sub-store i.e. Slices for each common components 
+# We have appSlice, videoSlice in this current Project
+## For this use createSlice()
+# debouncing - 
+<!-- Search debouncing is a technique used to delay the execution of a search function until a certain period has passed without additional input, usually in real-time search applications like autocomplete or live search.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s how it works and why it’s useful:
 
-## Available Scripts
+Delay in Execution: Debouncing adds a slight delay (say, 300 milliseconds) after a user stops typing before the search request is sent to the server. If the user types more characters within that delay period, the timer resets. This way, a search is only performed once typing has truly paused.
 
-In the project directory, you can run:
+Reduces API Requests: Without debouncing, each keystroke might trigger a search request, potentially leading to an overwhelming number of requests. Debouncing consolidates these into a single request, reducing server load and network traffic.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Improves User Experience: By avoiding excessive requests, debouncing makes the search smoother and faster, minimizing the delay and loading spinners between inputs, especially in applications where instant feedback is expected. -->
+#
+#
+#
+#
+#
+#
+#
+#
+##
+#

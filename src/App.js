@@ -1,16 +1,16 @@
 import './App.css';
 import HeaderComponent from './components/HeaderComponent';
-import BodyComponent from './components/BodyComponent';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
-
+import appRouter from './router/appRouter';
+import { RouterProvider } from 'react-router-dom';
 
 function App() {
   return (
     <Provider store={appStore}>
       <div>
         <HeaderComponent />
-        <BodyComponent />
+        <RouterProvider router={appRouter} />
       </div>
     </Provider>
   );
