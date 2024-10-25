@@ -1,14 +1,14 @@
-# Redux
-#
-# useDispatch is used to invoke a method use to push data into a store
-# UseSelector is used to get data from the store
-# Wrap the main App inside Provider to configure store
-# Example: <Provider store={appStore}> </Provider>
-# Create a main store using configureStore()
-# Create a sub-store i.e. Slices for each common components 
-# We have appSlice, videoSlice in this current Project
-## For this use createSlice()
-# debouncing - 
+- Redux
+-
+- useDispatch is used to invoke a method use to push data into a store
+- UseSelector is used to get data from the store
+- Wrap the main App inside Provider to configure store
+- Example: <Provider store={appStore}> </Provider>
+- Create a main store using configureStore()
+- Create a sub-store i.e. Slices for each common components 
+- We have appSlice, videoSlice in this current Project
+- For this use createSlice()
+- debouncing 
 Search debouncing is a technique used to delay the execution of a search function until a certain period has passed without additional input, usually in real-time search applications like autocomplete or live search.
 
 Here’s how it works and why it’s useful:
