@@ -17,9 +17,9 @@ function WatchPage() {
     <div>
         <div className='px-5 mt-3'>
             <iframe 
-                className='w-1/2'
+                className=''
                 width="1000" 
-                height="600" 
+                height="400" 
                 src={"https://www.youtube.com/embed/"+id} 
                 title="YouTube video player" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
